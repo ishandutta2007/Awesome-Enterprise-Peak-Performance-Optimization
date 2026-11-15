@@ -89,7 +89,7 @@ We welcome contributions from the global engineering community! To add a new pla
 
 1. 🍴 **Fork** this repository.
 2. 🌿 **Create a branch**: `git checkout -b feature/add-telemetry-engine`.
-3. 📝 **Edit `README.md`**: Follow existing table structures. Include exact pricing tiers, explicit free tier or trial limits, and official GitHub Stars_Badges.
+3. 📝 **Edit `README.md`**: Follow existing table structures. Include exact pricing tiers, explicit free tier or trial limits, and official GitHub_Stars_Badges.
 4. 📬 **Submit a Pull Request**: Provide a brief summary of what changed and citations to official product pricing or project documentation.
 
 ---
