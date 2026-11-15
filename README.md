@@ -1,6 +1,6 @@
 # Awesome-Enterprise-Peak-Performance-Optimization
 
-# Top Enterprise Peak Performance Optimization Ecosystem
+## Top Enterprise Peak Performance Optimization Ecosystem
 
 **Curated List of SaaS Platforms & Open-Source GitHub Projects**  
 *Focused on APM, Distributed Tracing & Self-Hosted Observability Backends*  
