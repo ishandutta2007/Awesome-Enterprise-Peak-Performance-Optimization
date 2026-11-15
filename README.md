@@ -1,70 +1,123 @@
-# Awesome-Enterprise-Peak-Performance-Optimization
+<div align="center">
 
-## Top Enterprise Peak Performance Optimization Ecosystem
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Enterprise Peak Performance Optimization Banner" width="100%" />
+</p>
 
-**Curated List of SaaS Platforms & Open-Source GitHub Projects**  
-*Focused on APM, Distributed Tracing & Self-Hosted Observability Backends*  
-**Last updated: March 2026**
+# 🚀 Awesome Enterprise Peak Performance Optimization
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Enterprise Peak Performance Optimization**. These tools help organizations monitor application performance, trace distributed transactions, and identify bottlenecks—covering everything from commercial APM suites with per-host or per-GB pricing to open-source backends that store traces, metrics, and logs without per-seat or per-host fees.
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Peak-Performance-Optimization"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Enterprise-Peak-Performance-Optimization?style=social&color=white" alt="Repo Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Peak-Performance-Optimization/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Enterprise-Peak-Performance-Optimization?style=social&color=white" alt="Forks" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Peak-Performance-Optimization/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Enterprise-Peak-Performance-Optimization?color=blue" alt="License" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
-**Examples** include Datadog APM, Dynatrace, New Relic, Splunk Observability, Coralogix, Apache SkyWalking, SigNoz, Jaeger, and OpenTelemetry Collector (the category leaders).
-
-**Open-source emphasis**: This section highlights every major active project for self-hosted APM, open-source distributed tracing, and community-driven observability pipelines—ideal for organizations seeking data sovereignty and avoiding per-host pricing that compounds as infrastructure scales. The open-source landscape splits into **full observability platforms** (SigNoz, SkyWalking) with unified logs/metrics/traces, and **focused tracing backends** (Jaeger) that excel at distributed trace storage and analysis .
-
-Contributions welcome! Open an PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-products)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-| Product | Description | Pricing (Starting) | Free Tier / Trial Limits |
-|---------|-------------|-------------------|--------------------------|
-| **[Datadog APM](https://www.datadoghq.com/)** | Full-stack observability with APM, infrastructure monitoring, logs, and distributed tracing. APM: **$31/host/month** (annual, with infra); Pro: **$35/host/month**; Enterprise: **$40/host/month**. Indexed spans: **$1.70/million** beyond included allotment (1M spans and 150 GB ingested spans included per host). | **$31/host/month** (APM + Infra, billed annually) | **14-day free trial** with full platform access; permanent free infrastructure tier capped at **5 hosts** with 1-day metric retention. |
-| **[Dynatrace](https://www.dynatrace.com/)** | Full-Stack Monitoring billed on memory consumption via Dynatrace Platform Subscription (DPS). Includes Grail, Smartscape, and Davis AI engine. | **$0.01/memory-GiB-hour** (~$7.20/month per 1 GiB host) | **15-day free trial** (up to ~50 Host Units / pool capacity, full access); no permanent free tier. |
-| **[New Relic](https://newrelic.com/)** | Usage-based all-in-one observability platform covering APM, infrastructure, logs, and traces with consumption billing. | **$0.40/GB** data ingest (Standard edition); **$10/month** for first additional Standard Full Platform user ($99/user/month beyond first). | **Free forever**: **100 GB/month** data ingest, 1 full platform user, unlimited basic users, and 10,000 synthetic checks/month. |
-| **[Splunk Observability Cloud](https://www.splunk.com/)** | Complete observability platform with APM, infrastructure monitoring, Real User Monitoring (RUM), and synthetics. | **$15/host/month** (Infrastructure); **$55/host/month** (APM, billed annually). | **Free forever edition**: monitoring for up to **15 hosts** with full core metrics and trace features; no day-count expiration. |
-| **[Coralogix](https://coralogix.com/)** | In-stream telemetry analytics and observability platform with TCO-based pricing via Coralogix Units (CU). | **$1.50/unit** (Logs: **0.12–0.75 units/GB** [$0.18–$1.13/GB]; Traces: **0.10–0.50 units/GB** [$0.15–$0.75/GB]; Metrics: **1 unit/30 GB** [$0.05/GB]). | **14-day free trial** with full access to all features, unlimited users, and an allotment of **8 units** (no credit card required). |
-| **[AppDynamics](https://www.appdynamics.com/)** | Cisco/Splunk enterprise APM and full-stack observability with Infrastructure-Based Licensing (IBL). | **$6/vCPU/month** (Infrastructure Edition); **$33/host/month** (Premium Edition APM); **$50/host/month** (Enterprise Edition). | **30-day free trial** with full APM and DEM features; reverts to restricted Lite mode (24-hour metric retention, limited apps) after trial. |
-
-## Open-Source GitHub Projects
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[SigNoz](https://github.com/SigNoz/signoz)** | [![Stars](https://img.shields.io/github/stars/SigNoz/signoz?style=social&color=white)](https://github.com/SigNoz/signoz/stargazers) | **The leading open-source Datadog alternative with unified logs, metrics, and traces.** MIT licensed Community Edition—**no license fee, no per-host fee, no per-user fee; you pay only for infrastructure** . Stores all telemetry in a **single columnar datastore (ClickHouse)** and exposes one Query Builder across signals—no switching between PromQL, LogQL, and TraceQL . **OpenTelemetry-native**—instrumentation stays portable. **SigNoz Cloud** pricing: **$0.30/GB** for logs/traces, **$0.10/million samples** for metrics; Teams from **$49/month**, Enterprise from **$4,000/month** . **Best for teams wanting a complete open-source observability platform** without Datadog's per-host billing surprises . |
-| **[Apache SkyWalking](https://github.com/apache/skywalking)** | [![Stars](https://img.shields.io/github/stars/apache/skywalking?style=social&color=white)](https://github.com/apache/skywalking/skywalking/stargazers) | **Open-source APM designed for microservices, cloud-native, and container architectures.** Apache-2.0. **End-to-end distributed tracing, service topology, and service-centric observability**. **Agents for Java, .NET Core, PHP, NodeJS, Go, Rust, C++, Python, and JavaScript**. **Native support for OpenTelemetry, Zipkin, Prometheus, and Fluentd**. **BanyanDB** native observability database (2022+). **Scales to 100+ billion telemetry events** per cluster . **Best for microservices teams wanting a proven APM** with broad language agent support and native OTel integration . |
-| **[Jaeger](https://github.com/jaegertracing/jaeger)** | [![Stars](https://img.shields.io/github/stars/jaegertracing/jaeger?style=social&color=white)](https://github.com/jaegertracing/jaeger/stargazers) | **The leading open-source distributed tracing backend (CNCF graduated).** Apache-2.0. **Jaeger v2** rebuilt on OpenTelemetry Collector framework—receives OTLP, presents traces in OTel terms (span links, typed attributes, structured events) . **Multiple storage backends**: Cassandra, Elasticsearch, OpenSearch, ClickHouse, Badger (embedded). **Adaptive and tail-based sampling**. **System Architecture and Deep Dependency Graphs**. **Service Performance Monitoring (SPM)** computes aggregate metrics from traces. **MCP server** for AI agent access to traces . **Best for teams wanting best-in-class trace storage and analysis** without a full observability platform . |
-| **[OpenTelemetry Collector](https://github.com/open-telemetry/opentelemetry-collector)** | [![Stars](https://img.shields.io/github/stars/open-telemetry/opentelemetry-collector?style=social&color=white)](https://github.com/open-telemetry/opentelemetry-collector/stargazers) | **Vendor-agnostic telemetry pipeline—the foundation of modern observability.** CNCF project, Apache-2.0. **Receives, processes, and exports telemetry** without running multiple agents. **Removes the need for vendor-specific collectors**—one agent for traces, metrics, and logs. Handles **retries, batching, encryption, and sensitive data filtering** before data reaches the backend . **Best for teams wanting to decouple instrumentation from any single observability vendor**—instrument once, export anywhere . |
-
-### Additional Strong Open-Source Options
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[Grafana Cloud (LGTM)](https://grafana.com/)** | — | **Managed open-source observability stack** (Loki, Grafana, Tempo, Mimir). **$19/month platform fee + usage**. APM/traces: Tempo at **$0.05 processing + $0.40 write + $0.10 retention per GB**; logs: **$0.55/GB all-in**; metrics: **$6.50 per 1,000 billable series**. **95th-percentile billing** excludes top-5% usage spikes—spikes during outages don't bill. **Adaptive Metrics** saves 30–60% on series count in mature installs . **Best for teams wanting managed LGTM** without operating Mimir/Loki/Tempo themselves . |
-| **[Apache Pinot](https://github.com/apache/pinot)** | [![Stars](https://img.shields.io/github/stars/apache/pinot?style=social&color=white)](https://github.com/apache/pinot/stargazers) | **Real-time distributed OLAP datastore for user-facing analytics.** Apache-2.0. **Sub-second latency at extremely high throughput**. Columnar storage with smart indexing and pre-aggregation. **Powers LinkedIn's "Who Viewed Profile"** and UberEats Restaurant Manager. Connects to Superset, Tableau, Power BI . **Best as a backend for high-concurrency performance dashboards** rather than a traditional APM . |
-
-**Frameworks for building custom systems**: Choose **SigNoz** for a complete open-source observability platform with unified logs/metrics/traces , **SkyWalking** for microservices APM with broad language agents , **Jaeger** for best-in-class trace storage and analysis , and **OpenTelemetry Collector** to decouple instrumentation from any single vendor —all without per-host pricing that compounds as infrastructure scales.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- APM and observability platforms handle application telemetry and potentially sensitive request data; enforce data retention policies, PII redaction, and access controls.
-- **Pricing models vary dramatically and hidden costs compound.** **Datadog's per-host APM ($31–$40/host) plus indexed span overages ($1.70/million)** can surprise teams as trace volume grows—one comparison estimated **$5,315/month for 100 hosts** vs. Grafana Cloud's **$2,253/month** for the same workload . **Dynatrace bills per memory-GiB-hour** ($0.01), not per host—smaller memory footprints cost less, but the model rewards efficient resource allocation . **New Relic offers a genuine permanent free tier** (100 GB ingest/month) and separates basic (free) from full platform users, making it the most accessible commercial entry point . **Open-source alternatives are genuinely viable**: SigNoz is MIT-licensed with no per-host or per-user fees , SkyWalking scales to 100B+ events , and Jaeger v2 is rebuilt on OpenTelemetry Collector . **Validate whether you need a unified platform (SigNoz) or focused tracing (Jaeger)** before committing.
+**Curated Directory of Enterprise APM, Distributed Tracing, High-Throughput Telemetry Pipelines &amp; Open-Source Observability Ecosystems**  
+*Comprehensive resource for SREs, DevOps architects, and performance engineering teams.*
 
 ---
 
-**Made for SREs, platform engineers, and organizations building observable systems.**  
-Let's make enterprise peak performance optimization more open, traceable, and cost-predictable.
+</div>
+
+## 📌 Executive Summary &amp; Overview
+
+This repository tracks premier **commercial SaaS platforms** and battle-tested **open-source projects** engineered for **Enterprise Peak Performance Optimization**, **Application Performance Monitoring (APM)**, **Distributed Tracing**, and **Autonomous Telemetry Pipelines**.
+
+As distributed cloud architectures scale across microservices, serverless workloads, and Kubernetes clusters, pinpointing latency bottlenecks, distributed tail latency, cascading degradations, and memory leaks becomes mission-critical. This guide provides actionable architectural insights, verified pricing tiers, transparent free trial limits, and direct GitHub popularity metrics to help teams achieve maximum performance while retaining predictable Total Cost of Ownership (TCO).
+
+---
+
+## 🧭 Table of Contents
+
+- [📊 Sector Overview &amp; Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ Enterprise SaaS &amp; Hosted Observability Platforms](#️-enterprise-saas--hosted-observability-platforms)
+- [🔓 Leading Open-Source GitHub Projects](#-leading-open-source-github-projects)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support &amp; Sponsorship](#-support--sponsorship)
+- [📈 Star History](#-star-history)
+- [⚖️ Disclaimer](#️-disclaimer)
+
+---
+
+## 📊 Sector Overview &amp; Market Dynamics
+
+The global application performance monitoring and cloud observability market is projected to expand from **$10.5B in 2025 to over $23B by 2031 (CAGR ~14.1%)**, accelerated by distributed microservices, multi-cloud complexity, and GenAI-driven telemetry loads. The sector exhibits a **moderately fragmented yet consolidated top tier**, where leading incumbents (Datadog, Dynatrace, Cisco/Splunk) compete aggressively on end-to-end full-stack suites while open standards like **OpenTelemetry (OTel)** and high-performance columnar engines (ClickHouse, BanyanDB) enable competitive, data-sovereign open-source alternatives to thrive.
+
+---
+
+## ☁️ Enterprise SaaS &amp; Hosted Observability Platforms
+
+*The table below catalogs enterprise SaaS observability platforms, ranked in descending order by enterprise market valuation / scale.*
+
+| Product | Enterprise Scale (Valuation / Revenue) | Description | Starting Pricing | Free Tier / Trial Limits |
+|:---|:---|:---|:---|:---|
+| **[Datadog APM](https://www.datadoghq.com/)** | **~$40B Valuation**<br>*(~$3.4B–$4.3B TTM Rev, Public: DDOG)* | 🌐 Complete cloud observability suite covering APM, distributed traces, synthetics, and server infrastructure monitoring. | **$31/host/month** (APM + Infra, annual); **$35/host** Pro; **$40/host** Enterprise. Overages: **$1.70/million** indexed spans. | **14-day free trial** (unrestricted full platform access); permanent free infrastructure plan capped at **5 hosts** with 1-day metric retention. |
+| **[Splunk Observability Cloud](https://www.splunk.com/)** | **$28B Valuation**<br>*(Acquired by Cisco, ~$3.65B+ ARR)* | 🔍 Enterprise full-stack observability platform delivering real-time streaming APM, infrastructure analytics, and RUM. | **$15/host/month** (Infrastructure); **$55/host/month** (APM, billed annually); RUM: **$14 per 10k sessions**. | **Free forever edition**: monitoring for up to **15 hosts** with full core metrics and trace telemetry; no time expiration. |
+| **[Dynatrace](https://www.dynatrace.com/)** | **~$15B Valuation**<br>*(~$2.0B–$2.2B TTM Rev, Public: DT)* | 🤖 Automated enterprise APM and observability driven by Davis AI engine, Smartscape topology mapping, and Grail data lakehouse. | **$0.01/memory-GiB-hour** (~$7.20/month per 1 GiB host) via Dynatrace Platform Subscription (DPS). | **15-day free trial** (full access pool of ~50 Host Units with live data ingestion); no permanent free tier. |
+| **[New Relic](https://newrelic.com/)** | **$6.5B Valuation**<br>*(Acquired by Francisco Partners/TPG, ~$1B ARR)* | 📈 Usage-driven all-in-one observability platform covering APM, microservice tracing, server logs, and synthetics. | **$0.40/GB** data ingest (Standard); **$10/month** for first additional Standard Full Platform user ($99/user/month beyond first). | **Free forever**: **100 GB/month** data ingest, 1 full platform user, unlimited basic users, and 10,000 synthetic checks/month. |
+| **[AppDynamics](https://www.appdynamics.com/)** | **$3.7B Acquisition**<br>*(Integrated into Cisco Observability/Splunk)* | 🏢 Enterprise APM built for mission-critical core architectures, business transaction monitoring, and hybrid infrastructure. | **$6/vCPU/month** (Infrastructure); **$33/host/month** (Premium Edition APM); **$50/host/month** (Enterprise Edition). | **30-day free trial** with full APM and DEM visibility; reverts to restricted Lite mode (24-hour metric retention, limited apps) after trial. |
+| **[Coralogix](https://coralogix.com/)** | **$1.6B Valuation**<br>*(Series F, $100M+ ARR)* | ⚡ In-stream stateful telemetry processing architecture (Streama) designed to optimize data pipeline TCO without indexing penalties. | **$1.50/unit** (Logs: **0.12–0.75 units/GB** [$0.18–$1.13/GB]; Traces: **0.10–0.50 units/GB** [$0.15–$0.75/GB]; Metrics: **1 unit/30 GB** [$0.05/GB]). | **14-day free trial** with full access to all features, unlimited users, and an allotment of **8 units** (no credit card required). |
+
+---
+
+## 🔓 Leading Open-Source GitHub Projects
+
+*The table below presents premier open-source distributed tracing, APM, continuous profiling, and telemetry pipeline backends, sorted in descending order by GitHub stargazers.*
+
+| Project | GitHub Stars | License | Primary Architectural Focus |
+|:---|:---:|:---:|:---|
+| **[Prometheus](https://github.com/prometheus/prometheus)** | [![Stars](https://img.shields.io/github/stars/prometheus/prometheus?style=social&color=white)](https://github.com/prometheus/prometheus/stargazers) | Apache-2.0 | ⏱️ CNCF graduated systems monitoring and alerting toolkit featuring a multi-dimensional time-series data model and PromQL. |
+| **[SigNoz](https://github.com/SigNoz/signoz)** | [![Stars](https://img.shields.io/github/stars/SigNoz/signoz?style=social&color=white)](https://github.com/SigNoz/signoz/stargazers) | MIT | 🦄 Full-stack open-source Datadog alternative with unified logs, metrics, and traces powered by ClickHouse and native OpenTelemetry. |
+| **[Grafana Loki](https://github.com/grafana/loki)** | [![Stars](https://img.shields.io/github/stars/grafana/loki?style=social&color=white)](https://github.com/grafana/loki/stargazers) | AGPL-3.0 | 📜 Horizontally scalable, highly available multi-tenant log aggregation system indexing metadata labels rather than full text. |
+| **[Apache SkyWalking](https://github.com/apache/skywalking)** | [![Stars](https://img.shields.io/github/stars/apache/skywalking?style=social&color=white)](https://github.com/apache/skywalking/stargazers) | Apache-2.0 | ☁️ Distributed APM designed for cloud-native microservices, container meshes, topology generation, and multi-language tracing. |
+| **[Jaeger](https://github.com/jaegertracing/jaeger)** | [![Stars](https://img.shields.io/github/stars/jaegertracing/jaeger?style=social&color=white)](https://github.com/jaegertracing/jaeger/stargazers) | Apache-2.0 | 🔎 CNCF graduated end-to-end distributed tracing backend; Jaeger v2 is natively rebuilt upon OpenTelemetry Collector pipelines. |
+| **[Vector](https://github.com/vectordotdev/vector)** | [![Stars](https://img.shields.io/github/stars/vectordotdev/vector?style=social&color=white)](https://github.com/vectordotdev/vector/stargazers) | MPL-2.0 | 🚀 Ultra high-performance, memory-safe Rust telemetry pipeline for collecting, transforming, and routing logs, metrics, and traces. |
+| **[Zipkin](https://github.com/openzipkin/zipkin)** | [![Stars](https://img.shields.io/github/stars/openzipkin/zipkin?style=social&color=white)](https://github.com/openzipkin/zipkin/stargazers) | Apache-2.0 | 📍 Pioneering distributed tracing system based on Google Dapper paper, providing latency troubleshooting in service architectures. |
+| **[Grafana Pyroscope](https://github.com/grafana/pyroscope)** | [![Stars](https://img.shields.io/github/stars/grafana/pyroscope?style=social&color=white)](https://github.com/grafana/pyroscope/stargazers) | AGPL-3.0 | 🔥 Continuous profiling platform to pinpoint CPU, memory, and I/O performance bottlenecks down to lines of application source code. |
+| **[OpenTelemetry Collector](https://github.com/open-telemetry/opentelemetry-collector)** | [![Stars](https://img.shields.io/github/stars/open-telemetry/opentelemetry-collector?style=social&color=white)](https://github.com/open-telemetry/opentelemetry-collector/stargazers) | Apache-2.0 | 🛰️ High-performance, proxy-neutral telemetry collector providing vendor-agnostic ingestion, transformation, and multi-destination dispatch. |
+| **[Apache Pinot](https://github.com/apache/pinot)** | [![Stars](https://img.shields.io/github/stars/apache/pinot?style=social&color=white)](https://github.com/apache/pinot/stargazers) | Apache-2.0 | ⚡ Distributed OLAP datastore delivering ultra low-latency analytical queries over massive event streams and real-time performance boards. |
+| **[Grafana Tempo](https://github.com/grafana/tempo)** | [![Stars](https://img.shields.io/github/stars/grafana/tempo?style=social&color=white)](https://github.com/grafana/tempo/stargazers) | AGPL-3.0 | 📦 Cost-efficient, high-scale distributed tracing backend requiring only object storage (S3/GCS) with deep Grafana integration. |
+| **[Uptrace](https://github.com/uptrace/uptrace)** | [![Stars](https://img.shields.io/github/stars/uptrace/uptrace?style=social&color=white)](https://github.com/uptrace/uptrace/stargazers) | BSL-1.1 | 🎯 Open-source APM tool that leverages OpenTelemetry and ClickHouse to analyze traces, metrics, and errors in a single pane. |
+
+---
+
+## 🤝 How to Contribute
+
+We welcome contributions from the global engineering community! To add a new platform or update existing metrics:
+
+1. 🍴 **Fork** this repository.
+2. 🌿 **Create a branch**: `git checkout -b feature/add-telemetry-engine`.
+3. 📝 **Edit `README.md`**: Follow existing table structures. Include exact pricing tiers, explicit free tier or trial limits, and official GitHub star badges.
+4. 📬 **Submit a Pull Request**: Provide a brief summary of what changed and citations to official product pricing or project documentation.
+
+---
+
+## 💖 Support &amp; Sponsorship
+
+If this curated compilation assists your infrastructure planning, reduces your observability billing, or accelerates your microservices optimization:
+
+- ⭐ **Star this repository** to improve discoverability for other engineers.
+- 🍴 **Fork and share** with your DevOps, SRE, and platform engineering colleagues.
+- ☕ **Buy us a coffee or sponsor ongoing maintenance**: Support development directly via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Enterprise-Peak-Performance-Optimization&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Enterprise-Peak-Performance-Optimization&type=date&legend=top-left)
+
+---
+
+## ⚖️ Disclaimer
+
+- This is a community-maintained research reference and does not constitute formal procurement endorsement.
+- All brand marks, product trademarks, and logos belong to their respective corporate owners.
+- Observability and telemetry pricing structures evolve rapidly; always verify active tier quotes and terms of service directly with vendors prior to production deployment.
+
+---
+
+<p align="center">
+  <b>Built with ❤️ for Site Reliability Engineers, Platform Architects, and Systems Performance Engineers worldwide.</b>
+</p>
