@@ -66,7 +66,7 @@ The global application performance monitoring and cloud observability market is 
 
 *The table below presents premier open-source distributed tracing, APM, continuous profiling, and telemetry pipeline backends, sorted in descending order by GitHub stargazers.*
 
-| Project | GitHub Stars | License | Primary Architectural Focus |
+| Project | GitHub_Stars | License | Primary Architectural Focus |
 |:---|:---:|:---:|:---|
 | **[Prometheus](https://github.com/prometheus/prometheus)** | [![Stars](https://img.shields.io/github/stars/prometheus/prometheus?style=social&color=white)](https://github.com/prometheus/prometheus/stargazers) | Apache-2.0 | ⏱️ CNCF graduated systems monitoring and alerting toolkit featuring a multi-dimensional time-series data model and PromQL. |
 | **[SigNoz](https://github.com/SigNoz/signoz)** | [![Stars](https://img.shields.io/github/stars/SigNoz/signoz?style=social&color=white)](https://github.com/SigNoz/signoz/stargazers) | MIT | 🦄 Full-stack open-source Datadog alternative with unified logs, metrics, and traces powered by ClickHouse and native OpenTelemetry. |
@@ -89,7 +89,7 @@ We welcome contributions from the global engineering community! To add a new pla
 
 1. 🍴 **Fork** this repository.
 2. 🌿 **Create a branch**: `git checkout -b feature/add-telemetry-engine`.
-3. 📝 **Edit `README.md`**: Follow existing table structures. Include exact pricing tiers, explicit free tier or trial limits, and official GitHub star badges.
+3. 📝 **Edit `README.md`**: Follow existing table structures. Include exact pricing tiers, explicit free tier or trial limits, and official GitHub Stars_Badges.
 4. 📬 **Submit a Pull Request**: Provide a brief summary of what changed and citations to official product pricing or project documentation.
 
 ---
